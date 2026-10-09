@@ -22,7 +22,7 @@
       --max: 1120px;
     }
     @media (prefers-color-scheme: dark) {
-      :root {
+      :root:not([data-theme="light"]) {
         --bg: #1a1714;
         --surface: #24201c;
         --text: #f2ede6;
@@ -32,6 +32,16 @@
         --accent-ink: #1a1714;
         --accent-soft: #3a2a22;
       }
+    }
+    :root[data-theme="dark"] {
+      --bg: #1a1714;
+      --surface: #24201c;
+      --text: #f2ede6;
+      --muted: #a89e93;
+      --border: #3a342e;
+      --accent: #e07a55;
+      --accent-ink: #1a1714;
+      --accent-soft: #3a2a22;
     }
 
     * { box-sizing: border-box; }
