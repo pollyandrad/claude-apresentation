@@ -42,6 +42,18 @@ body{background:#111;font-family:"IS",Georgia,serif;-webkit-print-color-adjust:e
 .marcador{border-bottom:2px dashed rgba(186,217,134,.55);padding-bottom:6px}
 .semmarca .marca{display:none}
 .logo-fundo{position:absolute;width:900px;right:-120px;top:110px;opacity:.12;pointer-events:none}
+
+/* ---- variações de composição ---- */
+.miolo.centro{left:50%;transform:translate(-50%,-50%);align-items:center;text-align:center;width:1640px;max-width:1640px}
+.miolo.direita{left:auto;right:140px;align-items:flex-end;text-align:right}
+.miolo.baixo{top:auto;bottom:200px;transform:none}
+.logo-centro{position:absolute;left:50%;top:50%;height:960px;transform:translate(-50%,-50%);opacity:.08;pointer-events:none}
+.logo-selo{width:150px;opacity:.9}
+.oval{position:absolute;left:50%;top:50%;width:820px;height:940px;transform:translate(-50%,-50%);border:2px solid rgba(186,217,134,.45);border-radius:50%}
+.oval::after{content:"";position:absolute;inset:18px;border:1px solid rgba(186,217,134,.25);border-radius:50%}
+.aspas{position:absolute;left:110px;top:40px;font-size:900px;line-height:1;color:var(--claro);opacity:.14;font-style:italic}
+.foto-esq{position:absolute;left:0;top:0;bottom:0;width:760px;border-right:2px dashed rgba(186,217,134,.55);display:grid;place-items:center;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:rgba(186,217,134,.8);text-align:center;line-height:1.8;background:rgba(0,0,0,.12)}
+.pequeno{font-size:64px;line-height:1.1}
 </style>
 </head>
 <body>
@@ -49,31 +61,33 @@ body{background:#111;font-family:"IS",Georgia,serif;-webkit-print-color-adjust:e
 <script>
 const BASE = '<div class="base"><span class="t">20</span><span class="t i">de</span><span class="t">novembro</span><span class="t i">de</span><span class="t">2026</span><span class="t i">em</span><span class="t">Recife</span></div>';
 const TOPO = (pilares=true) => `<div class="topo"><span class="t evento">Caisa Day 2026</span>${pilares ? '<span class="t pilares">Clínica • Carreira • Essência</span>' : ''}</div>`;
-const LOGO = '<img class="logo-fundo" src="../logo/caisa-logo-releitura_verde-claro.svg" alt="" aria-hidden="true">';
-const M = () => LOGO; // opção A: a logo substitui a palavra de fundo
+const LOGO_C = '<img class="logo-centro" src="../logo/caisa-logo-releitura_verde-claro.svg" alt="" aria-hidden="true">';
+const SELO = '<img class="logo-selo" src="../logo/caisa-logo-releitura_verde-claro.svg" alt="">';
+const M = (txt, css) => `<div class="marca" style="${css}">${txt}</div>`;
 
+// Cada tela tem uma composição própria; a logo só aparece nos momentos institucionais (01, 04, 10).
 const TELAS = [
-  {n:1, nome:'recepcao', html: TOPO() + M('bem-vindas','left:520px;top:520px;font-size:430px') +
-    `<div class="miolo"><h1 class="t titulo" style="font-size:230px">Bem-<em>vindas.</em></h1></div>` + BASE},
-  {n:2, nome:'abertura-oficial', html: TOPO() + M('pensa','left:980px;top:470px;font-size:520px') +
-    `<div class="miolo"><p class="t citacao">Toda transformação profissional<br>começa antes da ação:<br><em>começa na forma como você pensa.</em></p></div>` + BASE},
-  {n:3, nome:'convidada', html: TOPO() + LOGO +
-    `<div class="miolo" style="max-width:960px"><p class="t olho">Convidada</p><h1 class="t titulo" style="font-size:120px">Nome da<br>convidada</h1><div class="fio"></div><p class="t sub">Título da apresentação</p></div>
-     <div class="foto"><span class="t">Foto real<br>da convidada</span></div>` + BASE},
-  {n:4, nome:'transicao', html: TOPO(false) + M('essência','left:700px;top:560px;font-size:430px') +
-    `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub">Clínica • Carreira • Essência</p></div>` + BASE},
+  {n:1, nome:'recepcao', html: LOGO_C + TOPO() +
+    `<div class="miolo centro"><h1 class="t titulo" style="font-size:240px">Bem-<em>vindas.</em></h1></div>` + BASE},
+  {n:2, nome:'abertura-oficial', html: TOPO() + '<div class="aspas">“</div>' +
+    `<div class="miolo centro" style="max-width:1560px"><p class="t citacao" style="font-size:92px">Toda transformação profissional<br>começa antes da ação:</p><div class="fio"></div><p class="t sub" style="font-size:84px">começa na forma como você pensa.</p></div>` + BASE},
+  {n:3, nome:'convidada', html: '<div class="foto-esq"><span class="t">Foto real<br>da convidada</span></div>' +
+    `<div class="miolo" style="left:900px;max-width:880px"><p class="t olho">Convidada</p><h1 class="t titulo" style="font-size:124px">Nome da<br>convidada</h1><div class="fio"></div><p class="t sub">Título da apresentação</p></div>` +
+    `<div class="topo" style="left:900px"><span class="t evento">Caisa Day 2026</span></div>`},
+  {n:4, nome:'transicao', html:
+    `<div class="miolo centro">${SELO}<h1 class="t titulo" style="font-size:170px;margin-top:20px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub">Clínica • Carreira • Essência</p></div>` + BASE},
   {n:5, nome:'reflexao-marcela', html: TOPO() + M('movimento','left:-40px;top:560px;font-size:430px') +
     `<div class="miolo"><h1 class="t titulo">Da consciência<br>ao <em>movimento</em></h1><div class="fio"></div><p class="t sub claro">Dra. Marcela Oliveira</p></div>` + BASE},
-  {n:6, nome:'roda-de-conversa', html: TOPO() + M('trajetórias','left:560px;top:600px;font-size:380px') +
-    `<div class="miolo"><p class="t olho">Roda de conversa</p><h1 class="t titulo">Trajetórias, escolhas<br>e <em>possibilidades.</em></h1></div>` + BASE},
-  {n:7, nome:'dinamica-final', html: TOPO() + M('você','left:900px;top:470px;font-size:560px') +
-    `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Um momento<br>para <em>você.</em></h1></div>` + BASE},
-  {n:8, nome:'momento-do-pin', html: TOPO(false) + LOGO +
-    `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub marcador">[Texto simbólico a ser aprovado pela organizadora]</p></div>` + BASE},
-  {n:9, nome:'encerramento', html: TOPO() + M('escolha','left:820px;top:560px;font-size:430px') +
-    `<div class="miolo" style="max-width:1640px"><h1 class="t titulo" style="font-size:132px">Não é sair fazendo mais.<br>É sair <em>escolhendo melhor.</em></h1></div>` + BASE},
-  {n:10, nome:'agradecimento', html: TOPO(false) + M('obrigada','left:700px;top:580px;font-size:430px') +
-    `<div class="miolo"><h1 class="t titulo">Obrigada por fazer<br>parte desta <em>história.</em></h1><div class="fio"></div><p class="t sub">Caisa Day 2026</p></div>` + BASE},
+  {n:6, nome:'roda-de-conversa', html: TOPO() +
+    `<div class="miolo direita"><p class="t olho">Roda de conversa</p><h1 class="t titulo" style="font-size:170px">Trajetórias,<br>escolhas<br>e <em>possibilidades.</em></h1></div>` + BASE},
+  {n:7, nome:'dinamica-final', html: '<div class="oval"></div>' +
+    `<div class="miolo centro"><p class="t olho">Caisa Day 2026</p><h1 class="t titulo" style="font-size:120px">Um momento<br>para <em>você.</em></h1></div>`},
+  {n:8, nome:'momento-do-pin', html: TOPO(false) +
+    `<div class="miolo baixo"><h1 class="t titulo" style="font-size:150px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub marcador">[Texto simbólico a ser aprovado pela organizadora]</p></div>`},
+  {n:9, nome:'encerramento', html: TOPO() +
+    `<div class="miolo"><p class="t sub claro pequeno">Não é sair fazendo mais.</p><h1 class="t titulo" style="font-size:200px;color:var(--claro);font-style:italic">É sair escolhendo melhor.</h1></div>` + BASE},
+  {n:10, nome:'agradecimento', html: LOGO_C +
+    `<div class="miolo centro"><h1 class="t titulo" style="font-size:150px">Obrigada por fazer<br>parte desta <em>história.</em></h1><div class="fio"></div><p class="t sub">Caisa Day 2026</p></div>` + BASE},
 ];
 
 const q = new URLSearchParams(location.search);
