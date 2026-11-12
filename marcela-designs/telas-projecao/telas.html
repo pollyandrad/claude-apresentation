@@ -54,6 +54,27 @@ body{background:#111;font-family:"IS",Georgia,serif;-webkit-print-color-adjust:e
 .aspas{position:absolute;left:110px;top:40px;font-size:900px;line-height:1;color:var(--claro);opacity:.14;font-style:italic}
 .foto-esq{position:absolute;left:0;top:0;bottom:0;width:760px;border-right:2px dashed rgba(186,217,134,.55);display:grid;place-items:center;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:rgba(186,217,134,.8);text-align:center;line-height:1.8;background:rgba(0,0,0,.12)}
 .pequeno{font-size:64px;line-height:1.1}
+
+/* ---- referências da cliente ---- */
+@font-face{font-family:"Script";src:url("../fonts/MrsSaintDelafield-Regular.ttf")}
+.script{font-family:"Script",cursive;font-style:normal;color:var(--claro);line-height:1;letter-spacing:0}
+/* caderno com espiral */
+.espiral{position:absolute;left:0;right:0;top:-10px;display:flex;justify-content:center;gap:92px}
+.espiral svg{width:56px;height:150px}
+/* moldura em relevo + oval */
+.relevo{box-shadow:inset 3px 3px 5px rgba(0,0,0,.42),inset -2px -2px 4px rgba(255,255,255,.09),2px 2px 3px rgba(255,255,255,.06),-2px -2px 5px rgba(0,0,0,.35)}
+.moldura{position:absolute;inset:46px;border-radius:4px}
+.moldura2{position:absolute;inset:70px;border-radius:2px}
+.oval-relevo{position:absolute;left:50%;top:50%;width:1660px;height:960px;transform:translate(-50%,-50%);border-radius:50%}
+.oval-relevo2{position:absolute;left:50%;top:50%;width:1620px;height:920px;transform:translate(-50%,-50%);border-radius:50%}
+/* colagem: papel, foto e clipe */
+.papel{position:absolute;background:#F6F6F2 url("../cartao-dinamica/textura/verso.jpg") center/cover;box-shadow:0 34px 60px -24px rgba(0,0,0,.65),0 2px 5px rgba(0,0,0,.28)}
+.papel .foto-papel{position:absolute;inset:44px 44px 150px;background:repeating-linear-gradient(135deg,#d9dccf 0 14px,#e4e6dc 14px 28px);display:grid;place-items:center;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:19px;letter-spacing:.2em;text-transform:uppercase;color:#6c7560;text-align:center;line-height:1.8}
+.nota{opacity:.95}
+.nota .titulo{color:var(--musgo)}
+.nota .titulo em,.nota .sub,.nota .olho{color:var(--oliva)}
+.nota .fio{border-color:var(--oliva)}
+.clipe{position:absolute;width:70px;height:220px}
 </style>
 </head>
 <body>
@@ -65,27 +86,39 @@ const LOGO_C = '<img class="logo-centro" src="../logo/caisa-logo-releitura_verde
 const SELO = '<img class="logo-selo" src="../logo/caisa-logo-releitura_verde-claro.svg" alt="">';
 const M = (txt, css) => `<div class="marca" style="${css}">${txt}</div>`;
 
-// Cada tela tem uma composição própria; a logo só aparece nos momentos institucionais (01, 04, 10).
+const ESPIRAL = '<div class="espiral">' + Array(11).fill('<svg viewBox="0 0 56 150"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#6f6a5c"/><stop offset=".45" stop-color="#e9e3cf"/><stop offset=".7" stop-color="#a39b83"/><stop offset="1" stop-color="#4d493e"/></linearGradient></defs><ellipse cx="28" cy="124" rx="12" ry="9" fill="#1c2212"/><path d="M28 124 C 6 112, 4 30, 20 10 C 28 0, 40 6, 40 30 C 40 70, 36 108, 30 122" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/></svg>').join('') + '</div>';
+const MOLDURA = '<div class="moldura relevo"></div><div class="moldura2 relevo"></div>';
+const OVAL = '<div class="oval-relevo relevo"></div><div class="oval-relevo2 relevo"></div>';
+const CLIPE = (css) => `<svg class="clipe" style="${css}" viewBox="0 0 70 220"><defs><linearGradient id="c" x1="0" x2="1"><stop offset="0" stop-color="#7b766a"/><stop offset=".5" stop-color="#f1ede2"/><stop offset="1" stop-color="#8d8778"/></linearGradient></defs><path d="M22 60 L22 178 C22 200 50 200 50 178 L50 30 C50 6 12 6 12 30 L12 160" fill="none" stroke="url(#c)" stroke-width="6" stroke-linecap="round"/></svg>`;
+const COLAGEM = (foto, nota) => `
+  <div class="papel" style="left:170px;top:120px;width:640px;height:820px;transform:rotate(-2.2deg)"><div class="foto-papel foto"><span class="t">${foto}</span></div></div>
+  ${CLIPE('left:220px;top:70px;transform:rotate(-8deg)')}
+  <div class="papel nota" style="left:690px;top:300px;width:1060px;height:600px;transform:rotate(1.4deg)">
+    <div class="miolo" style="left:90px;max-width:900px">${nota}</div></div>`;
+const TOPO_DET = '<div class="topo"><i class="t i" style="font-size:28px;color:var(--claro)">by</i><span class="t" style="font-family:Pop;font-size:19px;letter-spacing:.08em">CAISA</span><span class="t" style="font-family:Pop;font-size:19px;letter-spacing:.08em">DAY</span><span class="t" style="font-family:Pop;font-size:19px;letter-spacing:.08em">2026</span><i class="t i" style="font-size:28px;color:var(--claro)">com</i><span class="t" style="font-family:Pop;font-size:19px;letter-spacing:.08em">DRA.</span><span class="t" style="font-family:Pop;font-size:19px;letter-spacing:.08em">MARCELA</span><span class="t" style="font-family:Pop;font-size:19px;letter-spacing:.08em">OLIVEIRA</span></div>';
+
+// Composições a partir das referências enviadas: caderno com espiral + manuscrito (01, 04),
+// moldura oval em relevo (02, 09), colagem de papel com clipe (03, 05), palavra manuscrita gigante (07).
 const TELAS = [
-  {n:1, nome:'recepcao', html: LOGO_C + TOPO() +
-    `<div class="miolo centro"><h1 class="t titulo" style="font-size:240px">Bem-<em>vindas.</em></h1></div>` + BASE},
-  {n:2, nome:'abertura-oficial', html: TOPO() + '<div class="aspas">“</div>' +
-    `<div class="miolo centro" style="max-width:1560px"><p class="t citacao" style="font-size:92px">Toda transformação profissional<br>começa antes da ação:</p><div class="fio"></div><p class="t sub" style="font-size:84px">começa na forma como você pensa.</p></div>` + BASE},
-  {n:3, nome:'convidada', html: '<div class="foto-esq"><span class="t">Foto real<br>da convidada</span></div>' +
-    `<div class="miolo" style="left:900px;max-width:880px"><p class="t olho">Convidada</p><h1 class="t titulo" style="font-size:124px">Nome da<br>convidada</h1><div class="fio"></div><p class="t sub">Título da apresentação</p></div>` +
-    `<div class="topo" style="left:900px"><span class="t evento">Caisa Day 2026</span></div>`},
-  {n:4, nome:'transicao', html:
-    `<div class="miolo centro">${SELO}<h1 class="t titulo" style="font-size:170px;margin-top:20px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub">Clínica • Carreira • Essência</p></div>` + BASE},
-  {n:5, nome:'reflexao-marcela', html: TOPO() + M('movimento','left:-40px;top:560px;font-size:430px') +
-    `<div class="miolo"><h1 class="t titulo">Da consciência<br>ao <em>movimento</em></h1><div class="fio"></div><p class="t sub claro">Dra. Marcela Oliveira</p></div>` + BASE},
+  {n:1, nome:'recepcao', html: ESPIRAL +
+    `<div class="miolo centro"><h1 class="t titulo" style="font-size:250px">Bem-<em>vindas.</em></h1><p class="t script" style="font-size:150px;margin-top:-30px;transform:rotate(-3deg)">Caisa Day 2026</p></div>` + BASE},
+  {n:2, nome:'abertura-oficial', html: MOLDURA + OVAL +
+    `<div class="miolo centro" style="width:1300px"><p class="t olho" style="font-size:30px;font-family:Pop;font-style:normal;letter-spacing:.2em;text-transform:uppercase">Caisa Day 2026</p><p class="t citacao" style="font-size:88px">Toda transformação profissional<br>começa antes da ação:</p><div class="fio" style="width:520px;border-top-width:1px"></div><p class="t sub" style="font-size:72px">começa na forma como você pensa.</p></div>`},
+  {n:3, nome:'convidada', html: COLAGEM('Foto real<br>da convidada',
+    '<p class="t olho">Convidada</p><h1 class="t titulo" style="font-size:112px">Nome da convidada</h1><div class="fio"></div><p class="t sub" style="font-size:54px">Título da apresentação</p>')},
+  {n:4, nome:'transicao', html: ESPIRAL +
+    `<div class="miolo centro">${SELO}<h1 class="t titulo" style="font-size:170px;margin-top:10px">Caisa Day 2026</h1><p class="t script" style="font-size:120px;margin-top:-20px;transform:rotate(-3deg)">Clínica, Carreira, Essência</p></div>` + BASE},
+  {n:5, nome:'reflexao-marcela', html: COLAGEM('Foto da<br>Dra. Marcela Oliveira',
+    '<p class="t olho">Reflexão com</p><h1 class="t titulo" style="font-size:112px">Da consciência<br>ao <em>movimento</em></h1><div class="fio"></div><p class="t sub" style="font-size:54px">Dra. Marcela Oliveira</p>')},
   {n:6, nome:'roda-de-conversa', html: TOPO() +
     `<div class="miolo direita"><p class="t olho">Roda de conversa</p><h1 class="t titulo" style="font-size:170px">Trajetórias,<br>escolhas<br>e <em>possibilidades.</em></h1></div>` + BASE},
-  {n:7, nome:'dinamica-final', html: '<div class="oval"></div>' +
-    `<div class="miolo centro"><p class="t olho">Caisa Day 2026</p><h1 class="t titulo" style="font-size:120px">Um momento<br>para <em>você.</em></h1></div>`},
+  {n:7, nome:'dinamica-final', html: TOPO_DET +
+    `<div class="miolo" style="top:330px;transform:none"><h1 class="t titulo" style="font-size:140px">Um momento</h1></div>
+     <p class="t script" style="position:absolute;left:330px;top:350px;font-size:450px;transform:rotate(-5deg);white-space:nowrap">para você.</p>` + BASE},
   {n:8, nome:'momento-do-pin', html: TOPO(false) +
     `<div class="miolo baixo"><h1 class="t titulo" style="font-size:150px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub marcador">[Texto simbólico a ser aprovado pela organizadora]</p></div>`},
-  {n:9, nome:'encerramento', html: TOPO() +
-    `<div class="miolo"><p class="t sub claro pequeno">Não é sair fazendo mais.</p><h1 class="t titulo" style="font-size:200px;color:var(--claro);font-style:italic">É sair escolhendo melhor.</h1></div>` + BASE},
+  {n:9, nome:'encerramento', html: MOLDURA + OVAL +
+    `<div class="miolo centro" style="width:1300px"><p class="t citacao" style="font-size:100px">Não é sair fazendo mais.</p><div class="fio" style="width:520px;border-top-width:1px"></div><p class="t sub" style="font-size:100px">É sair escolhendo melhor.</p></div>`},
   {n:10, nome:'agradecimento', html: LOGO_C +
     `<div class="miolo centro"><h1 class="t titulo" style="font-size:150px">Obrigada por fazer<br>parte desta <em>história.</em></h1><div class="fio"></div><p class="t sub">Caisa Day 2026</p></div>` + BASE},
 ];

@@ -31,7 +31,7 @@ const out = (...f) => path.join(__dirname, 'saida', ...f);
       });
       walk(el, { italic: cs.fontStyle === 'italic', color: cs.color });
       return { x: r.x, y: r.y, w: r.width, h: r.height, size: parseFloat(cs.fontSize), lh: parseFloat(cs.lineHeight) || null,
-        font: cs.fontFamily.includes('Pop') ? 'Poppins' : 'Instrument Serif', upper: cs.textTransform === 'uppercase',
+        font: cs.fontFamily.includes('Pop') ? 'Poppins' : cs.fontFamily.includes('Script') ? 'Mrs Saint Delafield' : 'Instrument Serif', upper: cs.textTransform === 'uppercase',
         spacing: parseFloat(cs.letterSpacing) || 0, align: cs.textAlign, runs };
     }));
     const foto = await p.evaluate(() => { const f = document.querySelector('.foto'); if (!f) return null; const r = f.getBoundingClientRect(); return { x: r.x, y: r.y, w: r.width, h: r.height }; });

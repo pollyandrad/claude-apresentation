@@ -6,53 +6,15 @@
   "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/01_recepcao.jpg",
   "textos": [
    {
-    "x": 140,
-    "y": 116,
-    "w": 237.265625,
-    "h": 31,
-    "size": 24,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": true,
-    "spacing": 7.68,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(186, 217, 134)",
-      "txt": "Caisa Day 2026"
-     }
-    ]
-   },
-   {
-    "x": 1477.46875,
-    "y": 110,
-    "w": 302.53125,
-    "h": 39,
-    "size": 30,
-    "lh": null,
+    "x": 383.75,
+    "y": 340.5,
+    "w": 1152.5,
+    "h": 245,
+    "size": 250,
+    "lh": 245,
     "font": "Instrument Serif",
     "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Clínica • Carreira • Essência"
-     }
-    ]
-   },
-   {
-    "x": 406.796875,
-    "y": 422.40625,
-    "w": 1106.40625,
-    "h": 235.1875,
-    "size": 240,
-    "lh": 235.2,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": -1.2,
+    "spacing": -1.25,
     "align": "center",
     "runs": [
      {
@@ -64,6 +26,25 @@
       "italic": true,
       "color": "rgb(186, 217, 134)",
       "txt": "vindas."
+     }
+    ]
+   },
+   {
+    "x": 542.2520751953125,
+    "y": 567.9156494140625,
+    "w": 835.480224609375,
+    "h": 193.168701171875,
+    "size": 150,
+    "lh": 150,
+    "font": "Mrs Saint Delafield",
+    "upper": false,
+    "spacing": 0,
+    "align": "center",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(186, 217, 134)",
+      "txt": "Caisa Day 2026"
      }
     ]
    },
@@ -210,16 +191,16 @@
   "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/02_abertura-oficial.jpg",
   "textos": [
    {
-    "x": 140,
-    "y": 116,
-    "w": 237.265625,
-    "h": 31,
-    "size": 24,
+    "x": 800.015625,
+    "y": 335.109375,
+    "w": 319.953125,
+    "h": 46,
+    "size": 30,
     "lh": null,
-    "font": "Instrument Serif",
+    "font": "Poppins",
     "upper": true,
-    "spacing": 7.68,
-    "align": "start",
+    "spacing": 6,
+    "align": "center",
     "runs": [
      {
       "italic": false,
@@ -229,31 +210,12 @@
     ]
    },
    {
-    "x": 1477.46875,
-    "y": 110,
-    "w": 302.53125,
-    "h": 39,
-    "size": 30,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Clínica • Carreira • Essência"
-     }
-    ]
-   },
-   {
-    "x": 456.15625,
-    "y": 363.96875,
-    "w": 1007.6875,
-    "h": 191.34375,
-    "size": 92,
-    "lh": 95.68,
+    "x": 478.0625,
+    "y": 415.109375,
+    "w": 963.875,
+    "h": 183.03125,
+    "size": 88,
+    "lh": 91.52,
     "font": "Instrument Serif",
     "upper": false,
     "spacing": 0,
@@ -277,12 +239,12 @@
     ]
    },
    {
-    "x": 434.109375,
-    "y": 625.3125,
-    "w": 1051.765625,
-    "h": 90.71875,
-    "size": 84,
-    "lh": 90.72,
+    "x": 509.234375,
+    "y": 667.140625,
+    "w": 901.515625,
+    "h": 77.75,
+    "size": 72,
+    "lh": 77.76,
     "font": "Instrument Serif",
     "upper": false,
     "spacing": 0,
@@ -292,139 +254,6 @@
       "italic": true,
       "color": "rgb(186, 217, 134)",
       "txt": "começa na forma como você pensa."
-     }
-    ]
-   },
-   {
-    "x": 140,
-    "y": 940,
-    "w": 25.90625,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "20"
-     }
-    ]
-   },
-   {
-    "x": 382.375,
-    "y": 933,
-    "w": 23.03125,
-    "h": 37,
-    "size": 28,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "de"
-     }
-    ]
-   },
-   {
-    "x": 621.890625,
-    "y": 940,
-    "w": 117.546875,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "novembro"
-     }
-    ]
-   },
-   {
-    "x": 955.90625,
-    "y": 933,
-    "w": 23.03125,
-    "h": 37,
-    "size": 28,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "de"
-     }
-    ]
-   },
-   {
-    "x": 1195.40625,
-    "y": 940,
-    "w": 51.9375,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "2026"
-     }
-    ]
-   },
-   {
-    "x": 1463.828125,
-    "y": 933,
-    "w": 30.609375,
-    "h": 37,
-    "size": 28,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "em"
-     }
-    ]
-   },
-   {
-    "x": 1710.90625,
-    "y": 940,
-    "w": 69.09375,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Recife"
      }
     ]
    }
@@ -438,39 +267,39 @@
   "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/03_convidada.jpg",
   "textos": [
    {
-    "x": 279.0625,
-    "y": 504,
-    "w": 199.875,
-    "h": 72,
-    "size": 20,
-    "lh": 36,
+    "x": 427.9485778808594,
+    "y": 494.8851318359375,
+    "w": 192.35983276367188,
+    "h": 75.61346435546875,
+    "size": 19,
+    "lh": 34.2,
     "font": "Poppins",
     "upper": true,
-    "spacing": 4,
+    "spacing": 3.8,
     "align": "center",
     "runs": [
      {
       "italic": false,
-      "color": "rgba(186, 217, 134, 0.8)",
+      "color": "rgb(108, 117, 96)",
       "txt": "Foto real"
      },
      {
       "italic": false,
-      "color": "rgba(186, 217, 134, 0.8)",
+      "color": "rgb(108, 117, 96)",
       "txt": "\n"
      },
      {
       "italic": false,
-      "color": "rgba(186, 217, 134, 0.8)",
+      "color": "rgb(108, 117, 96)",
       "txt": "da convidada"
      }
     ]
    },
    {
-    "x": 900,
-    "y": 308.0859375,
-    "w": 494.953125,
-    "h": 52,
+    "x": 782.8196411132812,
+    "y": 427.2669677734375,
+    "w": 744.1736450195312,
+    "h": 70.140625,
     "size": 40,
     "lh": null,
     "font": "Instrument Serif",
@@ -480,47 +309,37 @@
     "runs": [
      {
       "italic": true,
-      "color": "rgb(186, 217, 134)",
+      "color": "rgb(72, 97, 37)",
       "txt": "Convidada"
      }
     ]
    },
    {
-    "x": 900,
-    "y": 394.0859375,
-    "w": 494.953125,
-    "h": 243.03125,
-    "size": 124,
-    "lh": 121.52,
+    "x": 779.3074951171875,
+    "y": 513.2412719726562,
+    "w": 745.5845947265625,
+    "h": 127.8734130859375,
+    "size": 112,
+    "lh": 109.76,
     "font": "Instrument Serif",
     "upper": false,
-    "spacing": -0.62,
+    "spacing": -0.56,
     "align": "start",
     "runs": [
      {
       "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Nome da"
-     },
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "\n"
-     },
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "convidada"
+      "color": "rgb(55, 67, 37)",
+      "txt": "Nome da convidada"
      }
     ]
    },
    {
-    "x": 900,
-    "y": 707.1171875,
-    "w": 494.953125,
-    "h": 64.796875,
-    "size": 60,
-    "lh": 64.8,
+    "x": 776.1725463867188,
+    "y": 692.9376220703125,
+    "w": 744.3279418945312,
+    "h": 76.4512939453125,
+    "size": 54,
+    "lh": 58.32,
     "font": "Instrument Serif",
     "upper": false,
     "spacing": 0,
@@ -528,32 +347,18 @@
     "runs": [
      {
       "italic": true,
-      "color": "rgb(186, 217, 134)",
+      "color": "rgb(72, 97, 37)",
       "txt": "Título da apresentação"
-     }
-    ]
-   },
-   {
-    "x": 900,
-    "y": 110,
-    "w": 237.265625,
-    "h": 31,
-    "size": 24,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": true,
-    "spacing": 7.68,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(186, 217, 134)",
-      "txt": "Caisa Day 2026"
      }
     ]
    }
   ],
-  "foto": null
+  "foto": {
+   "x": 200.15350341796875,
+   "y": 151.06436157226562,
+   "w": 647.949951171875,
+   "h": 763.2550048828125
+  }
  },
  {
   "n": 4,
@@ -563,7 +368,7 @@
   "textos": [
    {
     "x": 530.140625,
-    "y": 509.8984375,
+    "y": 505.296875,
     "w": 859.703125,
     "h": 166.59375,
     "size": 170,
@@ -581,21 +386,21 @@
     ]
    },
    {
-    "x": 657.46875,
-    "y": 746.4921875,
-    "w": 605.046875,
-    "h": 64.796875,
-    "size": 60,
-    "lh": 64.8,
-    "font": "Instrument Serif",
+    "x": 516.869873046875,
+    "y": 662.9143676757812,
+    "w": 886.24462890625,
+    "h": 165.9525146484375,
+    "size": 120,
+    "lh": 120,
+    "font": "Mrs Saint Delafield",
     "upper": false,
     "spacing": 0,
     "align": "center",
     "runs": [
      {
-      "italic": true,
+      "italic": false,
       "color": "rgb(186, 217, 134)",
-      "txt": "Clínica • Carreira • Essência"
+      "txt": "Clínica, Carreira, Essência"
      }
     ]
    },
@@ -742,121 +547,40 @@
   "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/05_reflexao-marcela.jpg",
   "textos": [
    {
-    "x": 140,
-    "y": 116,
-    "w": 237.265625,
-    "h": 31,
-    "size": 24,
-    "lh": null,
-    "font": "Instrument Serif",
+    "x": 374.2694396972656,
+    "y": 492.8229675292969,
+    "w": 299.7181091308594,
+    "h": 79.73776245117188,
+    "size": 19,
+    "lh": 34.2,
+    "font": "Poppins",
     "upper": true,
-    "spacing": 7.68,
-    "align": "start",
+    "spacing": 3.8,
+    "align": "center",
     "runs": [
      {
       "italic": false,
-      "color": "rgb(186, 217, 134)",
-      "txt": "Caisa Day 2026"
-     }
-    ]
-   },
-   {
-    "x": 1477.46875,
-    "y": 110,
-    "w": 302.53125,
-    "h": 39,
-    "size": 30,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Clínica • Carreira • Essência"
-     }
-    ]
-   },
-   {
-    "x": 140,
-    "y": 329.921875,
-    "w": 760.515625,
-    "h": 294,
-    "size": 150,
-    "lh": 147,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": -0.75,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Da consciência"
+      "color": "rgb(108, 117, 96)",
+      "txt": "Foto da"
      },
      {
       "italic": false,
-      "color": "rgb(246, 246, 242)",
+      "color": "rgb(108, 117, 96)",
       "txt": "\n"
      },
      {
       "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "ao "
-     },
-     {
-      "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "movimento"
-     }
-    ]
-   },
-   {
-    "x": 140,
-    "y": 693.921875,
-    "w": 760.515625,
-    "h": 56.15625,
-    "size": 52,
-    "lh": 56.16,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
+      "color": "rgb(108, 117, 96)",
       "txt": "Dra. Marcela Oliveira"
      }
     ]
    },
    {
-    "x": 140,
-    "y": 940,
-    "w": 25.90625,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "20"
-     }
-    ]
-   },
-   {
-    "x": 382.375,
-    "y": 933,
-    "w": 23.03125,
-    "h": 37,
-    "size": 28,
+    "x": 784.1603393554688,
+    "y": 372.4083251953125,
+    "w": 568.9603881835938,
+    "h": 65.8585205078125,
+    "size": 40,
     "lh": null,
     "font": "Instrument Serif",
     "upper": false,
@@ -865,37 +589,52 @@
     "runs": [
      {
       "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "de"
+      "color": "rgb(72, 97, 37)",
+      "txt": "Reflexão com"
      }
     ]
    },
    {
-    "x": 621.890625,
-    "y": 940,
-    "w": 117.546875,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
+    "x": 777.966796875,
+    "y": 458.3826599121094,
+    "w": 573.052734375,
+    "h": 233.30850219726562,
+    "size": 112,
+    "lh": 109.76,
+    "font": "Instrument Serif",
+    "upper": false,
+    "spacing": -0.56,
     "align": "start",
     "runs": [
      {
       "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "novembro"
+      "color": "rgb(55, 67, 37)",
+      "txt": "Da consciência"
+     },
+     {
+      "italic": false,
+      "color": "rgb(55, 67, 37)",
+      "txt": "\n"
+     },
+     {
+      "italic": false,
+      "color": "rgb(55, 67, 37)",
+      "txt": "ao "
+     },
+     {
+      "italic": true,
+      "color": "rgb(72, 97, 37)",
+      "txt": "movimento"
      }
     ]
    },
    {
-    "x": 955.90625,
-    "y": 933,
-    "w": 23.03125,
-    "h": 37,
-    "size": 28,
-    "lh": null,
+    "x": 774.8318481445312,
+    "y": 747.7962646484375,
+    "w": 569.1145629882812,
+    "h": 72.16912841796875,
+    "size": 54,
+    "lh": 58.32,
     "font": "Instrument Serif",
     "upper": false,
     "spacing": 0,
@@ -903,70 +642,18 @@
     "runs": [
      {
       "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "de"
-     }
-    ]
-   },
-   {
-    "x": 1195.40625,
-    "y": 940,
-    "w": 51.9375,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "2026"
-     }
-    ]
-   },
-   {
-    "x": 1463.828125,
-    "y": 933,
-    "w": 30.609375,
-    "h": 37,
-    "size": 28,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "em"
-     }
-    ]
-   },
-   {
-    "x": 1710.90625,
-    "y": 940,
-    "w": 69.09375,
-    "h": 29,
-    "size": 19,
-    "lh": null,
-    "font": "Poppins",
-    "upper": true,
-    "spacing": 1.52,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Recife"
+      "color": "rgb(72, 97, 37)",
+      "txt": "Dra. Marcela Oliveira"
      }
     ]
    }
   ],
-  "foto": null
+  "foto": {
+   "x": 200.15350341796875,
+   "y": 151.06436157226562,
+   "w": 647.949951171875,
+   "h": 763.2550048828125
+  }
  },
  {
   "n": 6,
@@ -1218,206 +905,192 @@
   "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/07_dinamica-final.jpg",
   "textos": [
    {
-    "x": 851.578125,
-    "y": 379.40625,
-    "w": 216.84375,
-    "h": 52,
-    "size": 40,
+    "x": 140,
+    "y": 110,
+    "w": 23.78125,
+    "h": 37,
+    "size": 28,
     "lh": null,
     "font": "Instrument Serif",
     "upper": false,
     "spacing": 0,
-    "align": "center",
+    "align": "start",
     "runs": [
      {
       "italic": true,
       "color": "rgb(186, 217, 134)",
-      "txt": "Caisa Day 2026"
+      "txt": "by"
      }
     ]
    },
    {
-    "x": 680.625,
-    "y": 465.40625,
-    "w": 558.734375,
-    "h": 235.1875,
-    "size": 120,
-    "lh": 117.6,
+    "x": 332.359375,
+    "y": 117,
+    "w": 63.71875,
+    "h": 29,
+    "size": 19,
+    "lh": null,
+    "font": "Poppins",
+    "upper": false,
+    "spacing": 1.52,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "CAISA"
+     }
+    ]
+   },
+   {
+    "x": 564.671875,
+    "y": 117,
+    "w": 41.90625,
+    "h": 29,
+    "size": 19,
+    "lh": null,
+    "font": "Poppins",
+    "upper": false,
+    "spacing": 1.52,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "DAY"
+     }
+    ]
+   },
+   {
+    "x": 775.15625,
+    "y": 117,
+    "w": 51.9375,
+    "h": 29,
+    "size": 19,
+    "lh": null,
+    "font": "Poppins",
+    "upper": false,
+    "spacing": 1.52,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "2026"
+     }
+    ]
+   },
+   {
+    "x": 995.6875,
+    "y": 110,
+    "w": 42.28125,
+    "h": 37,
+    "size": 28,
+    "lh": null,
     "font": "Instrument Serif",
     "upper": false,
-    "spacing": -0.6,
-    "align": "center",
+    "spacing": 0,
+    "align": "start",
+    "runs": [
+     {
+      "italic": true,
+      "color": "rgb(186, 217, 134)",
+      "txt": "com"
+     }
+    ]
+   },
+   {
+    "x": 1206.546875,
+    "y": 117,
+    "w": 47.875,
+    "h": 29,
+    "size": 19,
+    "lh": null,
+    "font": "Poppins",
+    "upper": false,
+    "spacing": 1.52,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "DRA."
+     }
+    ]
+   },
+   {
+    "x": 1423.015625,
+    "y": 117,
+    "w": 96.796875,
+    "h": 29,
+    "size": 19,
+    "lh": null,
+    "font": "Poppins",
+    "upper": false,
+    "spacing": 1.52,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "MARCELA"
+     }
+    ]
+   },
+   {
+    "x": 1688.390625,
+    "y": 117,
+    "w": 91.609375,
+    "h": 29,
+    "size": 19,
+    "lh": null,
+    "font": "Poppins",
+    "upper": false,
+    "spacing": 1.52,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "OLIVEIRA"
+     }
+    ]
+   },
+   {
+    "x": 140,
+    "y": 330,
+    "w": 651.84375,
+    "h": 137.1875,
+    "size": 140,
+    "lh": 137.2,
+    "font": "Instrument Serif",
+    "upper": false,
+    "spacing": -0.7,
+    "align": "start",
     "runs": [
      {
       "italic": false,
       "color": "rgb(246, 246, 242)",
       "txt": "Um momento"
-     },
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "\n"
-     },
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "para "
-     },
-     {
-      "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "você."
-     }
-    ]
-   }
-  ],
-  "foto": null
- },
- {
-  "n": 8,
-  "nome": "momento-do-pin",
-  "arquivo": "08_momento-do-pin",
-  "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/08_momento-do-pin.jpg",
-  "textos": [
-   {
-    "x": 140,
-    "y": 110,
-    "w": 237.265625,
-    "h": 31,
-    "size": 24,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": true,
-    "spacing": 7.68,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(186, 217, 134)",
-      "txt": "Caisa Day 2026"
      }
     ]
    },
    {
-    "x": 140,
-    "y": 590.203125,
-    "w": 1110.78125,
-    "h": 147,
-    "size": 150,
-    "lh": 147,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": -0.75,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Caisa Day 2026"
-     }
-    ]
-   },
-   {
-    "x": 140,
-    "y": 807.203125,
-    "w": 1110.78125,
-    "h": 72.796875,
-    "size": 60,
-    "lh": 64.8,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(186, 217, 134)",
-      "txt": "[Texto simbólico a ser aprovado pela organizadora]"
-     }
-    ]
-   }
-  ],
-  "foto": null
- },
- {
-  "n": 9,
-  "nome": "encerramento",
-  "arquivo": "09_encerramento",
-  "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/09_encerramento.jpg",
-  "textos": [
-   {
-    "x": 140,
-    "y": 116,
-    "w": 237.265625,
-    "h": 31,
-    "size": 24,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": true,
-    "spacing": 7.68,
-    "align": "start",
-    "runs": [
-     {
-      "italic": false,
-      "color": "rgb(186, 217, 134)",
-      "txt": "Caisa Day 2026"
-     }
-    ]
-   },
-   {
-    "x": 1477.46875,
-    "y": 110,
-    "w": 302.53125,
-    "h": 39,
-    "size": 30,
-    "lh": null,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": 0,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Clínica • Carreira • Essência"
-     }
-    ]
-   },
-   {
-    "x": 140,
-    "y": 298.40625,
-    "w": 1300,
-    "h": 57.1875,
-    "size": 52,
-    "lh": 57.2,
-    "font": "Instrument Serif",
+    "x": 312.6100769042969,
+    "y": 300.0069580078125,
+    "w": 1201.63916015625,
+    "h": 549.986083984375,
+    "size": 450,
+    "lh": 450,
+    "font": "Mrs Saint Delafield",
     "upper": false,
     "spacing": 0,
     "align": "start",
     "runs": [
      {
       "italic": false,
-      "color": "rgb(246, 246, 242)",
-      "txt": "Não é sair fazendo mais."
-     }
-    ]
-   },
-   {
-    "x": 140,
-    "y": 389.59375,
-    "w": 1300,
-    "h": 392,
-    "size": 200,
-    "lh": 196,
-    "font": "Instrument Serif",
-    "upper": false,
-    "spacing": -1,
-    "align": "start",
-    "runs": [
-     {
-      "italic": true,
       "color": "rgb(186, 217, 134)",
-      "txt": "É sair escolhendo melhor."
+      "txt": "para você."
      }
     ]
    },
@@ -1551,6 +1224,119 @@
       "italic": false,
       "color": "rgb(246, 246, 242)",
       "txt": "Recife"
+     }
+    ]
+   }
+  ],
+  "foto": null
+ },
+ {
+  "n": 8,
+  "nome": "momento-do-pin",
+  "arquivo": "08_momento-do-pin",
+  "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/08_momento-do-pin.jpg",
+  "textos": [
+   {
+    "x": 140,
+    "y": 110,
+    "w": 237.265625,
+    "h": 31,
+    "size": 24,
+    "lh": null,
+    "font": "Instrument Serif",
+    "upper": true,
+    "spacing": 7.68,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(186, 217, 134)",
+      "txt": "Caisa Day 2026"
+     }
+    ]
+   },
+   {
+    "x": 140,
+    "y": 590.203125,
+    "w": 1110.78125,
+    "h": 147,
+    "size": 150,
+    "lh": 147,
+    "font": "Instrument Serif",
+    "upper": false,
+    "spacing": -0.75,
+    "align": "start",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "Caisa Day 2026"
+     }
+    ]
+   },
+   {
+    "x": 140,
+    "y": 807.203125,
+    "w": 1110.78125,
+    "h": 72.796875,
+    "size": 60,
+    "lh": 64.8,
+    "font": "Instrument Serif",
+    "upper": false,
+    "spacing": 0,
+    "align": "start",
+    "runs": [
+     {
+      "italic": true,
+      "color": "rgb(186, 217, 134)",
+      "txt": "[Texto simbólico a ser aprovado pela organizadora]"
+     }
+    ]
+   }
+  ],
+  "foto": null
+ },
+ {
+  "n": 9,
+  "nome": "encerramento",
+  "arquivo": "09_encerramento",
+  "fundo": "/home/user/claude-apresentation/marcela-designs/telas-projecao/fundo/pptx/09_encerramento.jpg",
+  "textos": [
+   {
+    "x": 551.75,
+    "y": 399.5,
+    "w": 816.5,
+    "h": 104,
+    "size": 100,
+    "lh": 104,
+    "font": "Instrument Serif",
+    "upper": false,
+    "spacing": 0,
+    "align": "center",
+    "runs": [
+     {
+      "italic": false,
+      "color": "rgb(246, 246, 242)",
+      "txt": "Não é sair fazendo mais."
+     }
+    ]
+   },
+   {
+    "x": 507.6875,
+    "y": 572.5,
+    "w": 904.609375,
+    "h": 108,
+    "size": 100,
+    "lh": 108,
+    "font": "Instrument Serif",
+    "upper": false,
+    "spacing": 0,
+    "align": "center",
+    "runs": [
+     {
+      "italic": true,
+      "color": "rgb(186, 217, 134)",
+      "txt": "É sair escolhendo melhor."
      }
     ]
    }
