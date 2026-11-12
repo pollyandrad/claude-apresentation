@@ -69,7 +69,7 @@ svg.curva path{fill:none}
       <div class="pilares">Clínica • Carreira • Essência</div>
     </div>
     <div class="miolo">
-      <h1 class="titulo" id="titulo">Reflexão<br>de encerramento</h1>
+      <h1 class="titulo" id="titulo">Minhas escolhas<br>para 2027</h1>
       <div class="fio"></div>
       <p class="efeito">O movimento que<br>escolho começar.</p>
     </div>
@@ -106,7 +106,7 @@ svg.curva path{fill:none}
     B: ['Minhas escolhas<br>para 2027', 'Responda no verso, com calma.'],
     C: ['Um momento<br>para você', 'Responda no verso, com calma.'],
   };
-  const op = OP[q.get('op') || 'A'];
+  const op = OP[q.get('op') || 'B'];
   document.getElementById('titulo').innerHTML = op[0];
   document.getElementById('instrucao').textContent = op[1];
   const lado = q.get('lado');
