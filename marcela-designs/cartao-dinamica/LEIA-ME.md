@@ -12,7 +12,7 @@
 - `..._FRENTE-E-VERSO.pdf`: as duas faces num único PDF de 2 páginas
 - `PROVA_com-guias_...pdf`: só para conferência. A linha vermelha marca o corte e a azul marca a área segura. **Não imprimir.**
 - `..._300dpi.png`: cada face em alta resolução
-- `MOCKUP_cartao-dinamica.png`: prévia para aprovação
+- `MOCKUP_cartao-dinamica.jpg`: prévia para aprovação
 
 ## Orientações para a gráfica
 - Papel fosco, **sem laminação nem verniz no verso**, para que a caneta escreva bem. Sugestão: offset, pólen ou couché fosco de 240 a 300 g.
