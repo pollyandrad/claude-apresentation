@@ -41,6 +41,7 @@ body{background:#111;font-family:"IS",Georgia,serif;-webkit-print-color-adjust:e
 .foto{position:absolute;right:140px;top:170px;width:620px;height:740px;border:2px dashed rgba(186,217,134,.55);display:grid;place-items:center;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:rgba(186,217,134,.8);text-align:center;line-height:1.8}
 .marcador{border-bottom:2px dashed rgba(186,217,134,.55);padding-bottom:6px}
 .semmarca .marca{display:none}
+.logo-fundo{position:absolute;width:900px;right:-120px;top:110px;opacity:.12;pointer-events:none}
 </style>
 </head>
 <body>
@@ -48,14 +49,15 @@ body{background:#111;font-family:"IS",Georgia,serif;-webkit-print-color-adjust:e
 <script>
 const BASE = '<div class="base"><span class="t">20</span><span class="t i">de</span><span class="t">novembro</span><span class="t i">de</span><span class="t">2026</span><span class="t i">em</span><span class="t">Recife</span></div>';
 const TOPO = (pilares=true) => `<div class="topo"><span class="t evento">Caisa Day 2026</span>${pilares ? '<span class="t pilares">Clínica • Carreira • Essência</span>' : ''}</div>`;
-const M = (txt, css) => `<div class="marca" style="${css}">${txt}</div>`;
+const LOGO = '<img class="logo-fundo" src="../logo/caisa-logo-releitura_verde-claro.svg" alt="" aria-hidden="true">';
+const M = () => LOGO; // opção A: a logo substitui a palavra de fundo
 
 const TELAS = [
   {n:1, nome:'recepcao', html: TOPO() + M('bem-vindas','left:520px;top:520px;font-size:430px') +
     `<div class="miolo"><h1 class="t titulo" style="font-size:230px">Bem-<em>vindas.</em></h1></div>` + BASE},
   {n:2, nome:'abertura-oficial', html: TOPO() + M('pensa','left:980px;top:470px;font-size:520px') +
     `<div class="miolo"><p class="t citacao">Toda transformação profissional<br>começa antes da ação:<br><em>começa na forma como você pensa.</em></p></div>` + BASE},
-  {n:3, nome:'convidada', html: TOPO() +
+  {n:3, nome:'convidada', html: TOPO() + LOGO +
     `<div class="miolo" style="max-width:960px"><p class="t olho">Convidada</p><h1 class="t titulo" style="font-size:120px">Nome da<br>convidada</h1><div class="fio"></div><p class="t sub">Título da apresentação</p></div>
      <div class="foto"><span class="t">Foto real<br>da convidada</span></div>` + BASE},
   {n:4, nome:'transicao', html: TOPO(false) + M('essência','left:700px;top:560px;font-size:430px') +
@@ -66,7 +68,7 @@ const TELAS = [
     `<div class="miolo"><p class="t olho">Roda de conversa</p><h1 class="t titulo">Trajetórias, escolhas<br>e <em>possibilidades.</em></h1></div>` + BASE},
   {n:7, nome:'dinamica-final', html: TOPO() + M('você','left:900px;top:470px;font-size:560px') +
     `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Um momento<br>para <em>você.</em></h1></div>` + BASE},
-  {n:8, nome:'momento-do-pin', html: TOPO(false) +
+  {n:8, nome:'momento-do-pin', html: TOPO(false) + LOGO +
     `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub marcador">[Texto simbólico a ser aprovado pela organizadora]</p></div>` + BASE},
   {n:9, nome:'encerramento', html: TOPO() + M('escolha','left:820px;top:560px;font-size:430px') +
     `<div class="miolo" style="max-width:1640px"><h1 class="t titulo" style="font-size:132px">Não é sair fazendo mais.<br>É sair <em>escolhendo melhor.</em></h1></div>` + BASE},
