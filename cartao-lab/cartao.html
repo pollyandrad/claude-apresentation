@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cartão dos Kits do LAB · CAISA</title>
+<style>
+/*
+  Cartão 100 × 150 mm (vertical), sangria de 3 mm → página 106 × 156 mm. Margem de segurança: 7 mm.
+  Mesmo sistema do cartão da dinâmica: Instrument Serif + Poppins (linha de detalhe), verdes Marcela, textura de papel.
+  Verso livre para mensagem escrita à mão pela Dra. Marcela.
+*/
+@font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Regular.ttf");font-style:normal}
+@font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Italic.ttf");font-style:italic}
+@font-face{font-family:"Pop";src:url("../fonts/Poppins-Regular.ttf")}
+:root{--musgo:#374325;--oliva:#486125;--claro:#BAD986;--off:#F6F6F2;--bleed:3mm;--safe:7mm}
+@page{size:106mm 156mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:106mm;background:#fff}
+body{font-family:"IS",Georgia,serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:106mm;height:156mm;position:relative;overflow:hidden;break-after:page}
+.page:last-child{break-after:auto}
+.inner{position:absolute;inset:calc(var(--bleed) + var(--safe));z-index:1}
+.detalhe{display:flex;justify-content:space-between;align-items:baseline;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:5.6pt;letter-spacing:.06em;text-transform:uppercase}
+.detalhe i{font-family:"IS",Georgia,serif;font-style:italic;font-size:8pt;text-transform:none;letter-spacing:0}
+.marca{position:absolute;font-family:"IS",Georgia,serif;font-style:italic;line-height:1;white-space:nowrap;pointer-events:none;user-select:none}
+
+/* FRENTE */
+.frente{background:var(--musgo) url("../cartao-dinamica/textura/frente.png") center/106mm 156mm no-repeat;color:var(--off)}
+.frente .marca{left:30mm;top:88mm;font-size:150pt;color:var(--claro);opacity:.13}
+.frente .inner{display:flex;flex-direction:column;justify-content:space-between}
+.frente .evento{font-size:8.5pt;letter-spacing:.32em;text-transform:uppercase;color:var(--claro)}
+.frente .titulo{font-size:40pt;line-height:.98}
+.frente .titulo em{color:var(--claro)}
+.frente .detalhe{color:var(--off);opacity:.9}
+.frente .detalhe i{color:var(--claro)}
+
+/* VERSO: livre para escrita à mão */
+.verso{background:var(--off) url("../cartao-dinamica/textura/verso.png") center/106mm 156mm no-repeat;color:var(--musgo)}
+.verso .inner{display:flex;flex-direction:column}
+.verso .saudacao{font-style:italic;font-size:17pt;color:var(--oliva)}
+.verso .detalhe{margin-top:auto;color:var(--musgo)}
+.verso .detalhe i{color:var(--oliva)}
+
+.guias .page::after{content:"";position:absolute;inset:var(--bleed);outline:.4pt dashed #E2443A;z-index:3}
+.guias .page::before{content:"";position:absolute;inset:calc(var(--bleed) + var(--safe));outline:.4pt dashed #2F80ED;z-index:3}
+</style>
+</head>
+<body>
+<section class="page frente" id="frente">
+  <div class="marca" aria-hidden="true">você</div>
+  <div class="inner">
+    <div class="evento">Caisa Lab</div>
+    <h1 class="titulo">Para<br><em>você.</em></h1>
+    <div class="detalhe"><i>by</i><span>Dra.</span><span>Marcela</span><span>Oliveira</span></div>
+  </div>
+</section>
+<section class="page verso" id="verso">
+  <div class="inner">
+    <p class="saudacao">Querida,</p>
+    <div class="detalhe"><i>by</i><span>Caisa</span><span>Lab</span><i>em</i><span>Recife</span></div>
+  </div>
+</section>
+<script>
+  const q = new URLSearchParams(location.search);
+  if (q.get('guias')) document.body.classList.add('guias');
+  const lado = q.get('lado');
+  if (lado) document.querySelectorAll('.page').forEach(p => { if (p.id !== lado) p.remove(); });
+</script>
+</body>
+</html>
