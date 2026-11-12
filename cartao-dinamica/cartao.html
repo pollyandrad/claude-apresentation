@@ -32,8 +32,11 @@ svg.curva path{fill:none}
 .frente .topo{display:grid;gap:2.2mm}
 .frente .evento{font-size:8.5pt;letter-spacing:.32em;text-transform:uppercase;color:var(--claro)}
 .frente .pilares{font-style:italic;font-size:10.5pt;opacity:.85}
-.frente .titulo{font-size:36pt;line-height:.98;letter-spacing:-.005em}
-.frente .titulo em{color:var(--claro)}
+.frente .miolo{display:grid;gap:5mm}
+.frente .titulo{font-size:31pt;line-height:1;letter-spacing:-.005em;text-wrap:balance}
+.frente .fio{width:12mm;height:0;border-top:.4pt solid var(--claro)}
+.frente .efeito{font-style:italic;font-size:14pt;line-height:1.15;color:var(--claro)}
+.frente .instrucao{font-size:9pt;opacity:.85;font-style:italic}
 .frente .rodape{display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;letter-spacing:.06em;opacity:.85}
 .frente .rodape span:last-child{font-style:italic}
 
@@ -65,8 +68,12 @@ svg.curva path{fill:none}
       <div class="evento">Caisa Day 2026</div>
       <div class="pilares">Clínica • Carreira • Essência</div>
     </div>
-    <h1 class="titulo">O movimento<br>que <em>escolho</em><br>começar.</h1>
-    <div class="rodape"><span>20 de novembro de 2026</span><span>Recife</span></div>
+    <div class="miolo">
+      <h1 class="titulo" id="titulo">Reflexão<br>de encerramento</h1>
+      <div class="fio"></div>
+      <p class="efeito">O movimento que<br>escolho começar.</p>
+    </div>
+    <div class="rodape"><span>20 de novembro de 2026<br><span class="instrucao" id="instrucao">Responda no verso, com calma.</span></span><span>Recife</span></div>
   </div>
 </section>
 
@@ -94,6 +101,14 @@ svg.curva path{fill:none}
 <script>
   const q = new URLSearchParams(location.search);
   if (q.get('guias')) document.body.classList.add('guias');
+  const OP = {
+    A: ['Reflexão<br>de encerramento', 'Responda no verso, com calma.'],
+    B: ['Minhas escolhas<br>para 2027', 'Responda no verso, com calma.'],
+    C: ['Um momento<br>para você', 'Responda no verso, com calma.'],
+  };
+  const op = OP[q.get('op') || 'A'];
+  document.getElementById('titulo').innerHTML = op[0];
+  document.getElementById('instrucao').textContent = op[1];
   const lado = q.get('lado');
   if (lado) document.querySelectorAll('.page').forEach(p => { if (p.id !== lado) p.remove(); });
 </script>
