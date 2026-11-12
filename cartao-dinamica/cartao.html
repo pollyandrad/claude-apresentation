@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Cartão da dinâmica final · CAISA DAY 2026</title>
+<style>
+/*
+  Cartão 100 × 150 mm (vertical), sangria de 3 mm em cada lado → página 106 × 156 mm.
+  Margem de segurança: 7 mm a partir do corte (10 mm a partir da borda do arquivo).
+  Identidade Marcela: Instrument Serif (títulos e itálico), paleta de verdes.
+*/
+@font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Regular.ttf");font-style:normal}
+@font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Italic.ttf");font-style:italic}
+:root{
+  --musgo:#374325; --oliva:#486125; --claro:#BAD986; --off:#F6F6F2; --grafite:#2C2626;
+  --pauta:#CDD3BE;
+  --bleed:3mm; --safe:7mm;
+}
+@page{size:106mm 156mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:106mm;background:#fff}
+body{font-family:"IS",Georgia,serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:106mm;height:156mm;position:relative;overflow:hidden;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+.inner{position:absolute;inset:calc(var(--bleed) + var(--safe))}
+svg.curva{position:absolute;inset:0;width:106mm;height:156mm}
+svg.curva path{fill:none}
+
+/* ---------- FRENTE ---------- */
+.frente{background:var(--musgo);color:var(--off)}
+.frente .inner{display:flex;flex-direction:column;justify-content:space-between}
+.frente .topo{display:grid;gap:2.2mm}
+.frente .evento{font-size:8.5pt;letter-spacing:.32em;text-transform:uppercase;color:var(--claro)}
+.frente .pilares{font-style:italic;font-size:10.5pt;opacity:.85}
+.frente .titulo{font-size:36pt;line-height:.98;letter-spacing:-.005em}
+.frente .titulo em{color:var(--claro)}
+.frente .rodape{display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;letter-spacing:.06em;opacity:.85}
+.frente .rodape span:last-child{font-style:italic}
+
+/* ---------- VERSO ---------- */
+.verso{background:var(--off);color:var(--musgo)}
+.verso .inner{display:flex;flex-direction:column}
+.verso .titulo{font-size:20pt;line-height:1.02;max-width:72mm}
+.verso .titulo em{color:var(--oliva)}
+.verso .blocos{margin-top:7mm;display:grid;gap:6.5mm}
+.verso .bloco{display:grid;gap:0}
+.verso .pergunta{display:flex;gap:2.4mm;align-items:baseline;font-size:10.5pt;line-height:1.25;color:var(--musgo)}
+.verso .pergunta i{font-size:9pt;color:var(--oliva);min-width:4mm}
+.verso .linha{height:8mm;border-bottom:.3pt solid var(--pauta)}
+.verso .rodape{margin-top:auto;text-align:center;font-size:7pt;letter-spacing:.34em;text-transform:uppercase;color:var(--oliva)}
+
+/* ---------- guias (só na prova) ---------- */
+.guias .page::after{content:"";position:absolute;inset:var(--bleed);outline:.4pt dashed #E2443A;pointer-events:none}
+.guias .page::before{content:"";position:absolute;inset:calc(var(--bleed) + var(--safe));outline:.4pt dashed #2F80ED;pointer-events:none;z-index:2}
+</style>
+</head>
+<body>
+
+<section class="page frente" id="frente">
+  <svg class="curva" viewBox="0 0 106 156" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-2 142 C 35 126, 75 122, 108 104" stroke="#BAD986" stroke-width=".25" stroke-opacity=".7"/>
+  </svg>
+  <div class="inner">
+    <div class="topo">
+      <div class="evento">Caisa Day 2026</div>
+      <div class="pilares">Clínica • Carreira • Essência</div>
+    </div>
+    <h1 class="titulo">O movimento<br>que <em>escolho</em><br>começar.</h1>
+    <div class="rodape"><span>20 de novembro de 2026</span><span>Recife</span></div>
+  </div>
+</section>
+
+<section class="page verso" id="verso">
+  <div class="inner">
+    <h2 class="titulo">O que merece minha <em>decisão</em> agora?</h2>
+    <div class="blocos">
+      <div class="bloco">
+        <p class="pergunta"><i>i.</i><span>O que não quero continuar repetindo em 2027?</span></p>
+        <div class="linha"></div><div class="linha"></div><div class="linha"></div>
+      </div>
+      <div class="bloco">
+        <p class="pergunta"><i>ii.</i><span>Qual escolha merece minha atenção neste momento?</span></p>
+        <div class="linha"></div><div class="linha"></div><div class="linha"></div>
+      </div>
+      <div class="bloco">
+        <p class="pergunta"><i>iii.</i><span>Qual primeiro movimento possível posso assumir?</span></p>
+        <div class="linha"></div><div class="linha"></div><div class="linha"></div>
+      </div>
+    </div>
+    <div class="rodape">Caisa Day 2026</div>
+  </div>
+</section>
+
+<script>
+  const q = new URLSearchParams(location.search);
+  if (q.get('guias')) document.body.classList.add('guias');
+  const lado = q.get('lado');
+  if (lado) document.querySelectorAll('.page').forEach(p => { if (p.id !== lado) p.remove(); });
+</script>
+</body>
+</html>
