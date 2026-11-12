@@ -81,7 +81,6 @@ svg.curva path{fill:none}
       <p class="efeito">O movimento que<br>escolho começar.</p>
     </div>
     <div class="rodape">
-      <span class="instrucao" id="instrucao">Responda no verso, com calma.</span>
       <div class="detalhe"><span>20</span><i>de</i><span>novembro</span><i>de</i><span>2026</span><i>em</i><span>Recife</span></div>
     </div>
   </div>
@@ -118,7 +117,6 @@ svg.curva path{fill:none}
   };
   const op = OP[q.get('op') || 'B'];
   document.getElementById('titulo').innerHTML = op[0];
-  document.getElementById('instrucao').textContent = op[1];
   const lado = q.get('lado');
   if (lado) document.querySelectorAll('.page').forEach(p => { if (p.id !== lado) p.remove(); });
 </script>
