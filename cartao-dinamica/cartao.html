@@ -11,6 +11,7 @@
 */
 @font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Regular.ttf");font-style:normal}
 @font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Italic.ttf");font-style:italic}
+@font-face{font-family:"Pop";src:url("../fonts/Poppins-Regular.ttf")}
 :root{
   --musgo:#374325; --oliva:#486125; --claro:#BAD986; --off:#F6F6F2; --grafite:#2C2626;
   --pauta:#CDD3BE;
@@ -37,8 +38,12 @@ svg.curva path{fill:none}
 .frente .fio{width:12mm;height:0;border-top:.4pt solid var(--claro)}
 .frente .efeito{font-style:italic;font-size:21pt;line-height:1.08;color:var(--claro)}
 .frente .instrucao{font-size:9pt;opacity:.85;font-style:italic}
-.frente .rodape{display:flex;justify-content:space-between;align-items:flex-end;font-size:9pt;letter-spacing:.06em;opacity:.85}
-.frente .rodape span:last-child{font-style:italic}
+.frente .rodape{display:grid;gap:3.2mm}
+/* linha de detalhe: caixa alta sans espaçada + palavras de ligação em itálico serifado, distribuídas na largura */
+.detalhe{display:flex;justify-content:space-between;align-items:baseline;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:5.6pt;letter-spacing:.06em;text-transform:uppercase}
+.detalhe i{font-family:"IS",Georgia,serif;font-style:italic;font-size:8pt;text-transform:none;letter-spacing:0}
+.frente .detalhe{color:var(--off);opacity:.9}
+.frente .detalhe i{color:var(--claro)}
 
 /* ---------- VERSO ---------- */
 .verso{background:var(--off) url("textura/verso.png") center/106mm 156mm no-repeat;color:var(--musgo)}
@@ -50,7 +55,8 @@ svg.curva path{fill:none}
 .verso .pergunta{display:flex;gap:2.4mm;align-items:baseline;font-size:10.5pt;line-height:1.25;color:var(--musgo)}
 .verso .pergunta i{font-size:9pt;color:var(--oliva);min-width:4mm}
 .verso .linha{height:8mm;border-bottom:.3pt solid var(--pauta)}
-.verso .rodape{margin-top:auto;text-align:center;font-size:7pt;letter-spacing:.34em;text-transform:uppercase;color:var(--oliva)}
+.verso .rodape{margin-top:auto;color:var(--musgo)}
+.verso .detalhe i{color:var(--oliva)}
 
 /* ---------- guias (só na prova) ---------- */
 .guias .page::after{content:"";position:absolute;inset:var(--bleed);outline:.4pt dashed #E2443A;pointer-events:none}
@@ -61,7 +67,7 @@ svg.curva path{fill:none}
 
 <section class="page frente" id="frente">
   <svg class="curva" viewBox="0 0 106 156" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M-2 142 C 35 126, 75 122, 108 104" stroke="#BAD986" stroke-width=".25" stroke-opacity=".7"/>
+    <path d="M-2 132 C 35 120, 75 116, 108 100" stroke="#BAD986" stroke-width=".25" stroke-opacity=".7"/>
   </svg>
   <div class="inner">
     <div class="topo">
@@ -73,7 +79,10 @@ svg.curva path{fill:none}
       <div class="fio"></div>
       <p class="efeito">O movimento que<br>escolho começar.</p>
     </div>
-    <div class="rodape"><span>20 de novembro de 2026<br><span class="instrucao" id="instrucao">Responda no verso, com calma.</span></span><span>Recife</span></div>
+    <div class="rodape">
+      <span class="instrucao" id="instrucao">Responda no verso, com calma.</span>
+      <div class="detalhe"><span>20</span><i>de</i><span>novembro</span><i>de</i><span>2026</span><i>em</i><span>Recife</span></div>
+    </div>
   </div>
 </section>
 
@@ -94,7 +103,7 @@ svg.curva path{fill:none}
         <div class="linha"></div><div class="linha"></div><div class="linha"></div>
       </div>
     </div>
-    <div class="rodape">Caisa Day 2026</div>
+    <div class="rodape detalhe"><i>by</i><span>Caisa</span><span>Day</span><span>2026</span><i>em</i><span>Recife</span></div>
   </div>
 </section>
 
