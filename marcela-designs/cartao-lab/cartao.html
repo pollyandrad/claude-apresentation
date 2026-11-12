@@ -43,6 +43,11 @@ body{font-family:"IS",Georgia,serif;-webkit-print-color-adjust:exact;print-color
 
 .guias .page::after{content:"";position:absolute;inset:var(--bleed);outline:.4pt dashed #E2443A;z-index:3}
 .guias .page::before{content:"";position:absolute;inset:calc(var(--bleed) + var(--safe));outline:.4pt dashed #2F80ED;z-index:3}
+
+/* Paleta Caminho A (identidade do evento) — ativada com ?paleta=a */
+.pal-a{--musgo:#103B2C;--oliva:#9A5A3C;--claro:#D49A77;--off:#F6EEE4;--pauta:#E2D3C3}
+.pal-a .frente{background-image:url("../cartao-dinamica/textura/frente-a.png")}
+.pal-a .verso{background-image:url("../cartao-dinamica/textura/verso-a.png")}
 </style>
 </head>
 <body>
@@ -63,6 +68,7 @@ body{font-family:"IS",Georgia,serif;-webkit-print-color-adjust:exact;print-color
 <script>
   const q = new URLSearchParams(location.search);
   if (q.get('guias')) document.body.classList.add('guias');
+  if (q.get('paleta') === 'a') document.documentElement.classList.add('pal-a');
   const lado = q.get('lado');
   if (lado) document.querySelectorAll('.page').forEach(p => { if (p.id !== lado) p.remove(); });
 </script>

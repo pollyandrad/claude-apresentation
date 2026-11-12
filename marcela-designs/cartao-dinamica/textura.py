@@ -59,4 +59,7 @@ def papel(base, seed, grao, manchas, n_fibras, fibra_amp, nome):
 papel("#374325", 7, grao=0.035, manchas=0.030, n_fibras=900, fibra_amp=0.10, nome="frente.png")
 # Verso: off-white com textura muito leve, para não atrapalhar a escrita
 papel("#F6F6F2", 11, grao=0.010, manchas=0.008, n_fibras=500, fibra_amp=-0.025, nome="verso.png")
+# Caminho A (identidade do evento): verde-esmeralda e marfim
+papel("#103B2C", 7, grao=0.035, manchas=0.030, n_fibras=900, fibra_amp=0.10, nome="frente-a.png")
+papel("#F6EEE4", 11, grao=0.010, manchas=0.008, n_fibras=500, fibra_amp=-0.025, nome="verso-a.png")
 print("texturas geradas em", OUT)
