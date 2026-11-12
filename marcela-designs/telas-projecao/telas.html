@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Telas de projeção · CAISA DAY 2026</title>
+<style>
+/*
+  Kit de telas de projeção · 1920 × 1080 (16:9).
+  Paleta Marcela, Instrument Serif + Poppins (linha de detalhe), textura de papel.
+  Área segura: 140 px nas laterais, 110 px em cima e embaixo.
+  Parâmetros: ?n=1..10 (uma tela) · ?semtexto=1 (só o fundo, para o PPTX) · sem ?n = todas.
+*/
+@font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Regular.ttf");font-style:normal}
+@font-face{font-family:"IS";src:url("../fonts/InstrumentSerif-Italic.ttf");font-style:italic}
+@font-face{font-family:"Pop";src:url("../fonts/Poppins-Regular.ttf")}
+:root{--musgo:#374325;--oliva:#486125;--claro:#BAD986;--off:#F6F6F2}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#111;font-family:"IS",Georgia,serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.tela{width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--musgo) url("fundo/textura.jpg") center/cover;color:var(--off);break-after:page}
+.tela:last-child{break-after:auto}
+.marca{position:absolute;font-style:italic;line-height:1;white-space:nowrap;color:var(--claro);opacity:.12;pointer-events:none}
+.semtexto .t{visibility:hidden}
+
+.topo{position:absolute;left:140px;right:140px;top:110px;display:flex;justify-content:space-between;align-items:baseline}
+.evento{font-size:24px;letter-spacing:.32em;text-transform:uppercase;color:var(--claro)}
+.pilares{font-style:italic;font-size:30px;color:var(--off)}
+.base{position:absolute;left:140px;right:140px;bottom:110px;display:flex;justify-content:space-between;align-items:baseline}
+.base .t{font-family:"Pop",Helvetica,Arial,sans-serif;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--off)}
+.base .t.i{font-family:"IS",Georgia,serif;font-style:italic;font-size:28px;letter-spacing:0;text-transform:none;color:var(--claro)}
+
+.miolo{position:absolute;left:140px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:34px;max-width:1300px}
+.olho{font-style:italic;font-size:40px;color:var(--claro)}
+.titulo{font-size:150px;line-height:.98;letter-spacing:-.005em}
+.titulo em,.sub em{color:var(--claro)}
+.fio{width:90px;height:0;border-top:2px solid var(--claro)}
+.sub{font-style:italic;font-size:60px;line-height:1.08;color:var(--claro)}
+.sub.claro{font-style:normal;color:var(--off);font-size:52px}
+.citacao{font-size:100px;line-height:1.04;max-width:1500px}
+
+.foto{position:absolute;right:140px;top:170px;width:620px;height:740px;border:2px dashed rgba(186,217,134,.55);display:grid;place-items:center;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:rgba(186,217,134,.8);text-align:center;line-height:1.8}
+.marcador{border-bottom:2px dashed rgba(186,217,134,.55);padding-bottom:6px}
+</style>
+</head>
+<body>
+<div id="telas"></div>
+<script>
+const BASE = '<div class="base"><span class="t">20</span><span class="t i">de</span><span class="t">novembro</span><span class="t i">de</span><span class="t">2026</span><span class="t i">em</span><span class="t">Recife</span></div>';
+const TOPO = (pilares=true) => `<div class="topo"><span class="t evento">Caisa Day 2026</span>${pilares ? '<span class="t pilares">Clínica • Carreira • Essência</span>' : ''}</div>`;
+const M = (txt, css) => `<div class="marca" style="${css}">${txt}</div>`;
+
+const TELAS = [
+  {n:1, nome:'recepcao', html: TOPO() + M('bem-vindas','left:520px;top:520px;font-size:430px') +
+    `<div class="miolo"><h1 class="t titulo" style="font-size:230px">Bem-<em>vindas.</em></h1></div>` + BASE},
+  {n:2, nome:'abertura-oficial', html: TOPO() + M('pensa','left:980px;top:470px;font-size:520px') +
+    `<div class="miolo"><p class="t citacao">Toda transformação profissional<br>começa antes da ação:<br><em>começa na forma como você pensa.</em></p></div>` + BASE},
+  {n:3, nome:'convidada', html: TOPO() +
+    `<div class="miolo" style="max-width:960px"><p class="t olho">Convidada</p><h1 class="t titulo" style="font-size:120px">Nome da<br>convidada</h1><div class="fio"></div><p class="t sub">Título da apresentação</p></div>
+     <div class="foto"><span class="t">Foto real<br>da convidada</span></div>` + BASE},
+  {n:4, nome:'transicao', html: TOPO(false) + M('essência','left:700px;top:560px;font-size:430px') +
+    `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub">Clínica • Carreira • Essência</p></div>` + BASE},
+  {n:5, nome:'reflexao-marcela', html: TOPO() + M('movimento','left:-40px;top:560px;font-size:430px') +
+    `<div class="miolo"><h1 class="t titulo">Da consciência<br>ao <em>movimento</em></h1><div class="fio"></div><p class="t sub claro">Dra. Marcela Oliveira</p></div>` + BASE},
+  {n:6, nome:'roda-de-conversa', html: TOPO() + M('trajetórias','left:560px;top:600px;font-size:380px') +
+    `<div class="miolo"><p class="t olho">Roda de conversa</p><h1 class="t titulo">Trajetórias, escolhas<br>e <em>possibilidades.</em></h1></div>` + BASE},
+  {n:7, nome:'dinamica-final', html: TOPO() + M('você','left:900px;top:470px;font-size:560px') +
+    `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Um momento<br>para <em>você.</em></h1></div>` + BASE},
+  {n:8, nome:'momento-do-pin', html: TOPO(false) +
+    `<div class="miolo"><h1 class="t titulo" style="font-size:190px">Caisa Day 2026</h1><div class="fio"></div><p class="t sub marcador">[Texto simbólico a ser aprovado pela organizadora]</p></div>` + BASE},
+  {n:9, nome:'encerramento', html: TOPO() + M('escolha','left:820px;top:560px;font-size:430px') +
+    `<div class="miolo" style="max-width:1640px"><h1 class="t titulo" style="font-size:132px">Não é sair fazendo mais.<br>É sair <em>escolhendo melhor.</em></h1></div>` + BASE},
+  {n:10, nome:'agradecimento', html: TOPO(false) + M('obrigada','left:700px;top:580px;font-size:430px') +
+    `<div class="miolo"><h1 class="t titulo">Obrigada por fazer<br>parte desta <em>história.</em></h1><div class="fio"></div><p class="t sub">Caisa Day 2026</p></div>` + BASE},
+];
+
+const q = new URLSearchParams(location.search);
+const n = +q.get('n');
+const lista = n ? TELAS.filter(t => t.n === n) : TELAS;
+document.getElementById('telas').innerHTML = lista.map(t => `<section class="tela" id="tela-${t.n}" data-nome="${t.nome}">${t.html}</section>`).join('');
+if (q.get('semtexto')) document.body.classList.add('semtexto');
+window.TELAS = TELAS.map(({n, nome}) => ({n, nome}));
+</script>
+</body>
+</html>
