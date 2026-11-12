@@ -69,6 +69,7 @@ svg.curva path{fill:none}
 .pal-a{--musgo:#103B2C;--oliva:#9A5A3C;--claro:#D49A77;--off:#F6EEE4;--pauta:#E2D3C3}
 .pal-a .frente{background-image:url("textura/frente-a.jpg")}
 .pal-a .verso{background-image:url("textura/verso-a.jpg")}
+.semmarca .marca{display:none}
 </style>
 </head>
 <body>
@@ -115,6 +116,7 @@ svg.curva path{fill:none}
 <script>
   const q = new URLSearchParams(location.search);
   if (q.get('guias')) document.body.classList.add('guias');
+  if (q.get('semmarca')) document.body.classList.add('semmarca');
   if (q.get('paleta') === 'a') document.documentElement.classList.add('pal-a');
   const OP = {
     A: ['Reflexão<br>de encerramento', 'Responda no verso, com calma.'],

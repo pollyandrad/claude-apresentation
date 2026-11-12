@@ -40,6 +40,7 @@ body{background:#111;font-family:"IS",Georgia,serif;-webkit-print-color-adjust:e
 
 .foto{position:absolute;right:140px;top:170px;width:620px;height:740px;border:2px dashed rgba(186,217,134,.55);display:grid;place-items:center;font-family:"Pop",Helvetica,Arial,sans-serif;font-size:20px;letter-spacing:.2em;text-transform:uppercase;color:rgba(186,217,134,.8);text-align:center;line-height:1.8}
 .marcador{border-bottom:2px dashed rgba(186,217,134,.55);padding-bottom:6px}
+.semmarca .marca{display:none}
 </style>
 </head>
 <body>
@@ -78,6 +79,7 @@ const n = +q.get('n');
 const lista = n ? TELAS.filter(t => t.n === n) : TELAS;
 document.getElementById('telas').innerHTML = lista.map(t => `<section class="tela" id="tela-${t.n}" data-nome="${t.nome}">${t.html}</section>`).join('');
 if (q.get('semtexto')) document.body.classList.add('semtexto');
+if (q.get('semmarca')) document.body.classList.add('semmarca');
 window.TELAS = TELAS.map(({n, nome}) => ({n, nome}));
 </script>
 </body>

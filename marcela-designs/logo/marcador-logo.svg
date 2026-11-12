@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 470" fill="none" stroke="#BAD986">
+  <!-- MARCADOR provisório: indica posição e escala da logo CAISA. Substituir pelo arquivo oficial. -->
+  <circle cx="200" cy="180" r="172" stroke-width="6"/>
+  <circle cx="200" cy="180" r="150" stroke-width="2" stroke-dasharray="6 8"/>
+  <text x="200" y="196" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="44" fill="#BAD986" stroke="none">logo</text>
+  <text x="200" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="72" letter-spacing="10" fill="#BAD986" stroke="none">CAISA</text>
+</svg>
