@@ -15,4 +15,4 @@
 Use papel **não revestido** (offset ou pólen de 240 a 300 g), sem laminação e sem verniz no verso, para a caneta não borrar.
 
 ## Para editar
-Altere `cartao.html` e rode `node cartao-lab/render.js`.
+Altere `cartao.html` e rode `node marcela-designs/cartao-lab/render.js`.

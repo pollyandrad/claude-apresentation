@@ -20,4 +20,4 @@
 - Peça à gráfica para converter o arquivo para CMYK e enviar uma prova de cor. O verde-claro #BAD986 tende a perder saturação na impressão.
 
 ## Para editar
-Altere `cartao.html` e rode `node cartao-dinamica/render.js`.
+Altere `cartao.html` e rode `node marcela-designs/cartao-dinamica/render.js`.

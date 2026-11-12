@@ -1,5 +1,5 @@
 """Gera as texturas de papel do cartão (300 dpi, 106 × 156 mm com sangria).
-Uso: python3 cartao-dinamica/textura.py
+Uso: python3 marcela-designs/cartao-dinamica/textura.py
 """
 import numpy as np
 from PIL import Image, ImageFilter, ImageDraw
